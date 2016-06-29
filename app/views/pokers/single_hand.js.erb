@@ -1,0 +1,5 @@
+<% if @error %>
+  $('#result').html("<p class='alert alert-warning'><%= @error %></p>");
+<% else %>
+  $('#result').html("<%= escape_javascript(render partial: 'result', locals: {input: @cards, result: @result}) %>");
+<% end %>
